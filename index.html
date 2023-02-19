@@ -1,57 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>ChatBot</title>
+  <link rel="stylesheet" href="chatBot.css">
+
+  <style>
+    .box {
+      display: inline-block;
+      width: 30%;
+      margin: 20px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .box h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .box p {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+
+    .bottom-right {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
 </head>
-<nav>
-  <a href="#" class="logo">
-    <h1>
-      <span class="jab">CHAT</span><span class="tv">BOT</span>
-    </h1>
-  </a>
-</nav>
-<ul>
-
-  <li class="nav-item">
-    <a href="discussion" class="nav-link" id="nav-link">Discussion</a>
-  </li>
-  <li class="nav-item">
-    <a href="Stats" class="nav-link" id="nav-link">Stats</a>
-  </li>
-  <li class="nav-item">
-    <a href="chatBot.html" class="nav-link" id="nav-link">Chat Bot</a>
-  </li>
-  <li class="nav-item">
-    <a href="discussion" class="nav-link" id="nav-link">Discussion</a>
-  </li>
-  <li class="nav-item">
-    <a href="home" class="nav-link" id="nav-link">Home</a>
-  </li>
-
-</ul>
-
 
 <body>
-  <div class="main">
-    <h1>Discussion</h1>
-    <div class="dropdown">
-      <button class="dropbtn">Options</button>
-      <div class="dropdown-content">
-        <a href="chatBot.html">Chat bot</a>
-        <a href="stats.html">Profile</a>
-        <a href="/">Discussion</a>
-      </div>
+  <nav>
+    <a href="#" class="logo">
+      <h1>
+        <span class="jab">CHAT</span><span class="tv">BOT</span>
+      </h1>
+    </a>
+    <ul>
+      <li class="nav-item">
+        <a href="discussion.html" class="nav-link" id="nav-link">Discussion</a>
+      </li>
+      <li class="nav-item">
+        <a href="profile.html" class="nav-link" id="nav-link">Stats</a>
+      </li>
+      <li class="nav-item">
+        <a href="chatBot.html" class="nav-link" id="nav-link">Chat Bot</a>
+      </li>
+      <li class="nav-item">
+        <a href="index.html" class="nav-link" id="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="signin.html" class="nav-link" id="nav-link">Sign Up/Login</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="discussion" style="margin-top: 50px;text-align: center;">
+    <h2>Question of the Day: </h2>
+    <p>What are the necessary skills programmers need to have in order to excel in a field in software engineering?</p>
+  </section>
+
+
+
+  <div class="box bottom-right">
+    <h3>Educational Learning</h3>
+    <video src="Test 1.mp4" width="100%" controls></video>
+  </div>
+  <style>
+    .chatbot {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px #ccc;
+      max-width: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .chatbot-header {
+      background-color: #2196F3;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      size: 11;
+    }
+
+    
+
+    .chatbot-input {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    #user-input {
+      flex-grow: 1;
+      margin-right: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    #send-button {
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="chatbot">
+    <div class="chatbot-header">
+      <h2>Your Answer:</h2>
+    </div>
+    <div class="chatbot-messages">
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Input your answer here......">
+      <button id="send-button">Send</button>
+      
     </div>
   </div>
+</body>
 
+</html>
 
-
-  <script src="script.js"></script>
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
 </body>
 
 </html>

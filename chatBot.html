@@ -1,34 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title>ChatBot</title>
-  <link rel="stylesheet" href="chatBot.css">
+  <title>Chat Bot Example</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <ul>
+    <li class="nav-item">
+      <a href="discussion" class="nav-link" id="nav-link">Discussion</a>
+    </li>
+    <li class="nav-item">
+      <a href="profile.html" class="nav-link" id="nav-link">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a href="chatBot.html" class="nav-link" id="nav-link">Chat Bot</a>
+    </li>
+    <li class="nav-item">
+      <a href="chatBot.html" class="nav-link" id="nav-link">Home</a>
+    </li>
+    <li class="nav-item">
+      <a href="signin.html" class="nav-link" id="nav-link">Sign Up/Login</a>
+    </li>
+  </ul>
+  <style>
+    .chatbot {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px #ccc;
+      max-width: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .chatbot-header {
+      background-color: #2196F3;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .chatbot-messages {
+      height: 350px;
+      overflow-y: scroll;
+      padding: 10px;
+    }
+
+    .chatbot-input {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    #user-input {
+      flex-grow: 1;
+      margin-right: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    #send-button {
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
-<nav>
-  <a href="#" class="logo">
-    <h1>
-      <span class="jab">CHAT</span><span class="tv">BOT</span>
-    </h1>
-  </a>
-</nav>
-<ul>
-
-  <li class="nav-item">
-    <a href="discussion" class="nav-link" id="nav-link">Discussion</a>
-  </li>
-  <li class="nav-item">
-    <a href="Stats" class="nav-link" id="nav-link">Stats</a>
-  </li>
-  <li class="nav-item">
-    <a href="chatBot.html" class="nav-link" id="nav-link">Chat Bot</a>
-  </li>
-  <li class="nav-item">
-    <a href="home" class="nav-link" id="nav-link">Home</a>
-  </li>
-
-</ul>
-<script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+<body>
+  <div class="chatbot">
+    <div class="chatbot-header">
+      <h2>ChatBot</h2>
+    </div>
+    <div class="chatbot-messages">
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="user-input" placeholder="Type your message...">
+      <button id="send-button">Send</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
 
 </html>
